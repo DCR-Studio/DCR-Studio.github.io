@@ -249,6 +249,92 @@ body {
     height: 20px;
 }
 
+.project-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.project-card__logo {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    flex-shrink: 0;
+    padding: 8px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.project-card__info {
+    flex: 1;
+    min-width: 0;
+}
+
+.project-card__info h3 {
+    font-size: 20px;
+    font-family: 'Alibaba PuHuiTi 3.0 55 Regular', Arial, sans-serif;
+    margin-bottom: 6px;
+}
+
+.project-card__info p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.75);
+    font-family: 'Alibaba PuHuiTi 3.0 65 Medium', Arial, sans-serif;
+}
+
+.project-card__actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-left: auto;
+}
+
+.project-card__action {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    color: #FFFFFF;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.project-card__action:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.project-card__action-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-left: -4px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.16);
+}
+
+.project-card__action-icon img {
+    width: 18px;
+    height: 18px;
+}
+
+.project-card__action-label {
+    font-size: 14px;
+    font-family: 'Alibaba PuHuiTi 3.0 55 Regular', Arial, sans-serif;
+}
+
 .site-footer {
     width: min(1100px, calc(100% - 48px));
     margin: 0 auto 36px;
@@ -298,6 +384,18 @@ body {
     font-size: 14px;
     font-family: 'Alibaba PuHuiTi 3.0 55 Regular', Arial, sans-serif;
     padding-top: 8px;
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        flex-wrap: wrap;
+    }
+
+    .project-card__actions {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 4px;
+    }
 }
 
 @media (max-width: 640px) {
