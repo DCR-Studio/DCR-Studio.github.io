@@ -398,6 +398,58 @@ body {
     }
 }
 
+/* 404 / error page styles */
+.error-page {
+    width: 100%;
+    min-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 24px;
+}
+
+.error-code {
+    font-size: 112px;
+    line-height: 1;
+    margin-bottom: 8px;
+    font-family: 'Alibaba PuHuiTi 3.0 65 Medium', Arial, sans-serif;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+}
+
+.error-message {
+    font-size: 20px;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 22px;
+}
+
+.error-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.error-actions .nav-button {
+    background: rgba(255,255,255,0.12);
+    padding: 12px 20px;
+    border-radius: 12px;
+    color: #FFFFFF;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.14);
+    transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.error-actions .nav-button:hover {
+    transform: translateY(-4px);
+    background: rgba(255,255,255,0.18);
+}
+
+@media (max-width: 768px) {
+    .error-code { font-size: 64px; }
+    .error-message { font-size: 16px; }
+}
+
 @media (max-width: 640px) {
     .hero {
         gap: 20px;
